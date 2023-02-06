@@ -197,5 +197,8 @@ socket.on("new video", (message2) => {
   document.body.appendChild(div);
   $(".dialog").dialog({
     width: 450,
+    close: function (event, ui) {
+      this.remove();
+    },
   });
 });
